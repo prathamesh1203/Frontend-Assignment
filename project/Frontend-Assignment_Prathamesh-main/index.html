@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar System with Controls</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.131/build/three.module.js",
+        "jsm/": "https://cdn.jsdelivr.net/npm/three@0.131/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="control-panel">
+    <button id="pauseBtn">⏸️ Pause</button>
+    <button id="resumeBtn">▶️ Resume</button>
+    <button id="resetBtn">🔁 Reset Speeds</button>
+    <label>
+      🌐 Global Speed:
+      <input type="range" id="globalSpeed" min="0.1" max="3" value="1" step="0.1">
+    </label>
+    <div id="planet-sliders"></div>
+  </div>
+  <canvas id="solarCanvas"></canvas>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
